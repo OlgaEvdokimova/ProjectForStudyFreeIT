@@ -8,6 +8,10 @@ public class Main {
      * класса String).
      */
     public static void main(String[] args) {
+        Cat cat1 = new Cat("blue", "pirs");
+        cat1.setBreed("siam");
+        cat1.setEyesColor("green");
+        //просто запустить программу
 
     }
 }

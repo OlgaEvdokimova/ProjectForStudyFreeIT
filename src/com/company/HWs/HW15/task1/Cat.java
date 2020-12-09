@@ -3,12 +3,13 @@ package com.company.HWs.HW15.task1;
 import java.util.Objects;
 
 public class Cat {
-    private String eyesColor;
-    private String breed;
+    private final String eyesColor;
+    private final String breed;
 
     public Cat(String eyesColor, String breed) {
         this.eyesColor = eyesColor;
         this.breed = breed;
+        System.out.println(this);
     }
 
     public String getEyesColor() {
@@ -16,7 +17,7 @@ public class Cat {
     }
 
     public void setEyesColor(String eyesColor) {
-        this.eyesColor = eyesColor;
+        Cat cat = new Cat(eyesColor, this.breed);
     }
 
     public String getBreed() {
@@ -24,7 +25,7 @@ public class Cat {
     }
 
     public void setBreed(String breed) {
-        this.breed = breed;
+        Cat cat = new Cat(this.eyesColor, breed);
     }
 
     @Override
