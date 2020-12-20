@@ -11,13 +11,15 @@ public class MinMax<T extends Comparable<T>> {
     }
 
     public T min() {
-        T min = array[0];
-        for (T el : array) {
-            if (el.compareTo(min) < 0) {
-                min = el;
+        if (array.length > 0) {
+            T min = array[0];
+            for (T el : array) {
+                if (el.compareTo(min) < 0) {
+                    min = el;
+                }
             }
-        }
-        return min;
+            return min;
+        } else throw new EmptyArrayException("EmptyArrayException");
     }
 
     public T max() {
